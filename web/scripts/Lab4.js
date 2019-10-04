@@ -17,6 +17,32 @@ var Lab4 = ( function() {
              */
 
             // INSERT YOUR CODE HERE
+            
+            
+            var inputAsString = document.getElementById("input").value; 
+            //input is brought in as a string data type
+            var data = rates["rates"];
+            var s = "";
+            
+            
+            
+            if (inputAsString.length > 0){ //check that input is not null
+                if(!isNaN(inputAsString)){ //check that input is a number
+                    
+                    var input = parseInt(inputAsString); //convert string -> int
+                    
+                    for(rate in data) {
+                        
+                        var convertedInput = input * data[rate];
+                        
+                        
+                    }
+                   
+                    
+                    
+                }
+            }
+            
 
         },
         
