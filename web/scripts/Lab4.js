@@ -20,7 +20,7 @@ var Lab4 = ( function() {
             
             
             var inputAsString = document.getElementById("input").value; 
-            //input is brought in as a string data type
+            //input is brought in as a string data type3
             var data = rates["rates"];
             var lineOfHtml = "";
             
