@@ -22,7 +22,7 @@ var Lab4 = ( function() {
             var inputAsString = document.getElementById("input").value; 
             //input is brought in as a string data type
             var data = rates["rates"];
-            var s = "";
+            var lineOfHtml = "";
             
             
             
@@ -34,17 +34,18 @@ var Lab4 = ( function() {
                     for(rate in data) {
                         
                         var convertedInput = input * data[rate];
-                        
+                        lineOfHtml += "<p>" + rate + ":" + convertedInput.toFixed(2) + "</p>";                        
                         
                     }
-                   
+                    lineOfHtml += "<p>Using exchange rates from " + rates["date"] + "</p>";
                     
-                    
+                    $('#output').html(lineOfHtml);
                 }
             }
+        }
             
 
-        },
+    },
         
         getConversion: function() {
             
