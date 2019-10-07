@@ -134,14 +134,7 @@ public class Rates {
             json.put("date", "2019-09-20");
             
        
-            
-            
-            
-            
-            
-            
-            
-    
+     
             
             /* Parse top-level container to a JSON string */
             
