@@ -20,29 +20,32 @@ var Lab4 = ( function() {
             
             
             var inputAsString = document.getElementById("input").value; 
-            //input is brought in as a string data type3
-            var data = rates["rates"];
+            //input is brought in as a string data type
             var lineOfHtml = "";
+            var data = rates["rates"];
             
             
             
-            if (inputAsString.length > 0){ //check that input is not null
-                if(!isNaN(inputAsString)){ //check that input is a number
-                    
+            
+            if (!isNaN(inputAsString)){
+                if (inputAsString.length > 0){
+                //check that input is a number and not null
                     var input = parseInt(inputAsString); //convert string -> int
                     
-                    for(rate in data) {
-                        
-                        var convertedInput = input * data[rate];
-                        lineOfHtml += "<p>" + rate + ":" + convertedInput.toFixed(2) + "</p>";                        
-                        
+                    if(input > 0) {
+                        for(rate in data) {
+
+                            var convertedInput = input * data[rate];
+                            lineOfHtml += "<p>" + rate + ":" + convertedInput.toFixed(2) + "</p>";                        
+
+                        }
+                        lineOfHtml += "<p>Using exchange rates from " + rates["date"] + "</p>";
+
+                        $('#output').html(lineOfHtml);
                     }
-                    lineOfHtml += "<p>Using exchange rates from " + rates["date"] + "</p>";
-                    
-                    $('#output').html(lineOfHtml);
                 }
             }
-        }
+        
             
 
     },
